@@ -43,53 +43,50 @@
                     <li>Устанавливается через bower</li>
                 </ul>
 
-                <h2><a id="Использование" class="anchor" href="#%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Использование</h2>
+                <h2>Использование</h2>
 
+                <h4>Создаем пациента в HTML</h4>
+<pre class="prettyprint lang-html">
+&lt;div id="canvas"&gt;&lt;/div&gt;</pre>
+
+                <h4>И оживляем его!</h4>
 <pre class="prettyprint lang-js">
 var g = Gauge({
     id: "canvas",       // ID элемента для установки прибора
     width: 400,         // Размер
-    name: "Вольтметр",  // Имя прибора
-    index: "кВ",        // Единицы измерения
-    scaleInside: false, // Шкала внесена внутрь
     maxValue: 6,        // Максимальное значение
-    colors: {           // Цвета:
-        background: '#000', // — задника
-        texts: '#fff',      // — цифр, букв и разметки
-        hands: '#f00',      // — стрелки
-        base: '#02fefe',    // — шкалы
-        warning: '#02aeee', // — стремной зоны
-        danger: '#f00'      // — опасной зоны
-    },
     scaleRange: {
         warning: 4.5,   // начало стремной зоны
         danger: 5.5     // начало опасной зоны
     },
-    value: 4        // текущее значение
-});
+    value: 4            // текущее значение
+});</pre>
 
-g.setValue(5);      // Установить новое значение в единицах
+                <h4>Меняем значения</h4>
+<pre class="prettyprint lang-js">
+g.setValue(5);      // Установить новое значение в единицах, или
 g.set(0.25);        // Установить новое значение в долях единицы</pre>
 
                 <h2>Примеры использования</h2>
 
-                <h3>Спидометр и вольтметр</h3>
+                <p>Еще немножечко кастомизации</p>
+
                 <div id="examples"></div>
                 <pre class="prettyprint">
 Gauge({
     id: "examples",
     width: 400,
-    name: 'Спидометр',
-    index: "км / ч",
-    scaleInside: true,
+    name: 'Спидометр',  // Имя прибора
+    index: "км / ч",    // Единицы измерения
+    scaleInside: true,  // Шкала не внесена внутрь
     maxValue: 250,
-    colors: {
-        background: '#000',
-        texts: '#fff',
-        hands: '#f00',
-        base: '#02fefe',
-        warning: '#fa0',
-        danger: '#f00'
+    colors: {           // Цвета:
+        background: '#000', // — задника
+        texts: '#fff',      // — цифр, букв и разметки
+        hands: '#f00',      // — стрелки
+        base: '#02fefe',    // — шкалы
+        warning: '#fa0',    // — стремной зоны
+        danger: '#f00'      // — опасной зоны
     },
     scaleRange: {
         warning: 200,
@@ -106,7 +103,7 @@ Gauge({
     maxValue: 1000
 });</pre>
 
-                <h2><a id="Поддержка-браузерами" class="anchor" href="#%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0-%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D0%B0%D0%BC%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Поддержка браузерами</h2>
+                <h2>Поддержка браузерами</h2>
 
                 <p>Прибор корректно отображается во всех современных браузерах<span class="red">*</span>:</p>
 
@@ -122,14 +119,14 @@ Gauge({
                     <li>Android 2.1+</li>
                 </ul>
 
-                <p><span class="red">*</span><small>Чисто теоритически ;) Я не проверял</small></p>
+                <p><span class="red">*</span><small>Чисто теоретически ;) Я не проверял</small></p>
 
                 <h2>История разработки</h2>
                 <h4>Version 0.0.1</h4>
 
                 <p>
                     Собрал, оформил и выложил на ГитХаб. <br/>
-                    Даже и не знаю, на что ушло больше сил ;)
+                    Даже и не знаю, на что ушло больше сил и времени ;)
                 </p>
 
             </section>
