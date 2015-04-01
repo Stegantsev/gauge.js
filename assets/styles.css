@@ -253,3 +253,11 @@ footer {
     color:#444;
   }
 }
+
+.red {color: #f00;}
+
+#ribbon {
+    position: fixed; top: 0; right: 0;
+    width: 149px; height: 149px;
+    background: url('ribbon.png');
+}

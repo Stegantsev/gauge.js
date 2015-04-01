@@ -1,0 +1,17 @@
+{
+  "name": "stegantsev/gauge.js",
+  "version": "0.0.1",
+  "main": [
+    "dist/gauge.js",
+    "dist/gauge.min.js",
+    "dist/jquery.gauge.js"
+  ],
+  "description": "Native JavaScript gauge control",
+  "license": "MIT",
+  "ignore": [
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
